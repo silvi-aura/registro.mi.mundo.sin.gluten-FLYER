@@ -79,7 +79,7 @@ const K='AIzaSyCBbM7x6VMk2bLq7MCUZuqnbxFIbRdjrck', PID='mi-mundo-sin-gluten', SA
 const BASE=`https://firestore.googleapis.com/v1/projects/${PID}/databases/(default)`, DB=BASE+'/documents', DBN=`projects/${PID}/databases/(default)/documents`;
 const $=s=>document.querySelector(s), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let S={tok:null,ref:null,exp:0,email:''}, ITEMS=[], LAST=null;
-let URLAPP=(()=>{try{return localStorage.getItem('mm.panel.url')}catch(e){return null}})()||'https://silvi-aura.github.io/mi.mundo.sin.gluten.FLYER/';
+let URLAPP=(()=>{try{return localStorage.getItem('mm.panel.url')}catch(e){return null}})()||'https://silvi-aura.github.io/mi.mundo.sin.gluten.APP.FLYER/';
 const ALFA='ABCDEFGHJKMNPQRSTUVWXYZ23456789';
 function rnd(n){const a=new Uint32Array(n);(window.crypto||{getRandomValues:x=>{for(let i=0;i<x.length;i++)x[i]=Math.random()*4294967296}}).getRandomValues(a);return [...a].map(v=>ALFA[v%ALFA.length]).join('')}
 function firstName(n){return (String(n).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().match(/[A-Z]+/)||['CLIENTE'])[0].slice(0,8)}
